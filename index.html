@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alento</title>
     <style>
         body{
@@ -22,25 +23,11 @@
             background-color: #F6F8F8;
             border-radius: 10px;
         }
-        fieldset{
-            background-color: #F6F8F8;
-            height: 100%;
-            border-radius: 10px;
-        }
         div{
             display: block;
             position: relative;
             top: 25%;
             left: 25%;
-        }
-        @media only screen and (max-width: 800){
-
-            div{
-                display: block;
-                position: relative;
-                top: 25%;
-                left: 50%;
-            }
         }
         .input{
             display: block;
@@ -54,8 +41,25 @@
             border-color: transparent;
             position: relative;
             left: 10%;
+            margin-top: 2%;
             height: 40px;
             width: 90px;
+        }
+        @media (min-width: 800px){
+            div{
+                left: 35%;
+            }
+            #enviar{
+                background-color: #2F3241;
+                color: #F6F8F8;
+                border-radius: 8px;
+                border-color: transparent;
+                position: relative;
+                left: 6%;
+                margin-top: 2%;
+                height: 40px;
+                width: 90px;
+            }
         }
     </style>
 </head>
@@ -74,7 +78,7 @@
             <br>
             <br>
             <br>
-                <input id="enviar" aling="center" type="submit" value="Entrar">
+                <input id="enviar" type="submit" value="Entrar">
             </div>
     </form>
 </body>
