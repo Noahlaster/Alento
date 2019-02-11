@@ -1,0 +1,27 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #2F3241;
+}
+form{
+   
+    width: 65%;
+    height: 70%;
+    position: absolute;
+    top: 15%;
+    left: 18%;
+    background-color: #F6F8F8;
+    border-radius: 10px;
+}
+h2{
+    position: relative;
+    left: 20px;
+}
+div{
+    display: block;
+    position: relative;
+    top: 5%;
+    left: 13%;
+}
+input{
+    margin-bottom: 10px;
+}
