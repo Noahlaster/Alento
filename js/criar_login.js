@@ -1,3 +1,0 @@
-function voltarPaginaInicial(){
-    history.back();
-}
