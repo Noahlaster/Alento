@@ -5,26 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Criar Conta</title>
     <link rel="stylesheet" type="text/css" href="../style/criar_login.css">
-    <script src="../js/criar_login.js"></script>
+    <script>
+        function goBack(){
+            history.back();
+        }
+    </script>
 </head>
 <body>
     <form>
         <h2>REGISTRAR MINHA CONTA</h2>
         <div>
-            <input type="text" placeholder="Nome Completo" size="50">
+            <input id="nome" type="text" placeholder="Nome Completo" size="50" required="required">
             <br>
-            <input type="text" placeholder="E-mail" size="50">
+            <input type="text" placeholder="E-mail" size="50" required="required">
             <br>
-            <input type="text" placeholder="Login" size="50" size="50">
+            <input type="text" placeholder="Login" size="50" size="50" required="required">
             <br>
-            <input type="password" placeholder="Senha" size="50">
+            <input type="password" placeholder="Senha" size="50" required="required">
             <br>
-            <input type="password" placeholder="Repita a senha" size="50">
+            <input type="password" placeholder="Repita a senha" size="50" required="required">
             <br>
-            <input type="text" placeholder="Dica de senha" size="50">
+            <input type="text" placeholder="Dica de senha" size="50" required="required">
             <br>
-            <button onclick="voltarPaginaInicial()">Voltar</button>
+            <button name="voltar" onclick="goBack()">Voltar</button>
+            <button onclick="criarLogin()">Cadastrar</button>
         </div>
     </form>
+    <script>
+        function criarLogin(){
+
+            //Próxima tarefa é terminar de colocar os getElement para então validar o login
+
+            var nome = document.getElementById('nome').value;
+
+            var sqlite = require('sqlite-sync');
+
+            sqlite.connect('database/database.db');
+
+            sqlite.insert("CADASTRO",{NAME:nome}, function(res){
+	            if(res.error){
+		            throw res.error;
+                console.log(res);
+                }
+                else{
+                    alert('Cadastro realizado com sucesso !');
+                }
+            });
+
+            sqlite.close();
+        }
+    </script>
 </body>
 </html>
