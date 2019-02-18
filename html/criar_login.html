@@ -5,11 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Criar Conta</title>
     <link rel="stylesheet" type="text/css" href="../style/criar_login.css">
-    <script>
-        function goBack(){
-            history.back();
-        }
-    </script>
 </head>
 <body>
     <form>
@@ -17,35 +12,51 @@
         <div>
             <input id="nome" type="text" placeholder="Nome Completo" size="50" required="required">
             <br>
-            <input type="text" placeholder="E-mail" size="50" required="required">
+            <input id="email" type="text" placeholder="E-mail" size="50" required="required">
             <br>
-            <input type="text" placeholder="Login" size="50" size="50" required="required">
+            <input id="login" type="text" placeholder="Login" size="50" size="50" required="required">
             <br>
-            <input type="password" placeholder="Senha" size="50" required="required">
+            <input id="senha" type="password" placeholder="Senha" size="50" required="required">
             <br>
-            <input type="password" placeholder="Repita a senha" size="50" required="required">
+            <input id="c_senha" type="password" placeholder="Repita a senha" size="50" required="required">
             <br>
-            <input type="text" placeholder="Dica de senha" size="50" required="required">
+            <input id="d_senha" type="text" placeholder="Dica de senha" size="50" required="required">
             <br>
-            <button name="voltar" onclick="goBack()">Voltar</button>
-            <button onclick="criarLogin()">Cadastrar</button>
+            <input id="input" type="button" name="voltar" onclick="goBack()" value="Voltar">
+            <button type="submit" onclick="criarLogin()">Registrar</button>
         </div>
     </form>
     <script>
+        function goBack(){
+            history.back();
+        }
         function criarLogin(){
 
-            //Próxima tarefa é terminar de colocar os getElement para então validar o login
-
             var nome = document.getElementById('nome').value;
+            var email = document.getElementById('email').value;
+            var login = document.getElementById('login').value;
+            var senha = document.getElementById('senha').value;
+            var c_senha = document.getElementById('c_senha').value;
+            var d_senha = document.getElementById('d_senha').value;
+
+            if(senha==c_senha){
+
+                if(document.getElementById('nome').value.length > 1 && 
+                   document.getElementById('email').value.length > 1 && 
+                   document.getElementById('login').value.length > 1 && 
+                   document.getElementById('senha').value.length > 1 && 
+                   document.getElementById('c_senha').value.length > 1 && 
+                   document.getElementById('d_senha').value.length > 1){
 
             var sqlite = require('sqlite-sync');
 
             sqlite.connect('database/database.db');
 
-            sqlite.insert("CADASTRO",{NAME:nome}, function(res){
+            sqlite.insert("CADASTRO",{NAME:nome, EMAIL:email, LOGIN:login, SENHA:senha, D_SENHA:d_senha}, function(res){
 	            if(res.error){
 		            throw res.error;
                 console.log(res);
+                alert('Erro: Conexão ao database indisponível.');
                 }
                 else{
                     alert('Cadastro realizado com sucesso !');
@@ -54,6 +65,14 @@
 
             sqlite.close();
         }
+        else{
+            alert('ERRO: ALGO INESPERADO ACONTECEU.');
+        }
+            }
+        else{
+            alert('As senhas não coincidem.');
+        }
+        }   
     </script>
 </body>
 </html>
