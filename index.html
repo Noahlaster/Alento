@@ -11,9 +11,11 @@
 
         sqlite.connect('database/database.db');
 
-        sqlite.run("CREATE TABLE IF NOT EXISTS CADASTRO(ID INTEGER PRIMARY KEY AUTOINCREMENT, NAME TEXT);",function(res){
-            if(res.error)
+        sqlite.run("CREATE TABLE IF NOT EXISTS CADASTRO(ID INTEGER PRIMARY KEY AUTOINCREMENT, NAME TEXT NOT NULL, EMAIL TEXT NOT NULL, LOGIN TEXT NOT NULL, SENHA TEXT NOT NULL, D_SENHA TEXT NOT NULL);",function(res){
+            if(res.error){
                 throw res.error;
+                alert('Erro: Conexão ao database indisponível.');
+            }
             console.log(res);
         });
 
@@ -27,19 +29,67 @@
     <form>
             <div>
                 <label>Usuário:</label>
-                <input class="input" type="text" required="required">
+                <input id="login" class="input" type="text" required="required">
             <br>
             <br>
             <br>
                 <label>Senha:</label>
-                <input class="input" type="password" required="required">
+                <input id="senha" class="input" type="password" required="required">
             <br>
             <br>
             <br>
-                <input id="enviar" type="submit" value="Entrar">
+                <input id="enviar" type="submit" value="Entrar" onclick="logar()">
             <br>    
                 <a href="../Alento/html/criar_login.html">Criar Login</a>
+                <a href="../Alento/html/criar_login.html">Esqueceu sua senha?</a>
             </div>
     </form>
+    <script>
+        function logar(){
+
+            var login = document.getElementById('login').value;
+            var senha = document.getElementById('senha').value;
+            //var d_login;
+            //var d_senha;
+            var d_id;
+
+            var sqlite = require('sqlite-sync');
+
+            sqlite.connect('database/database.db');
+
+            var query = sqlite.run("SELECT LOGIN FROM CADASTRO WHERE LOGIN = " + login + ";");
+            var rows = 2;
+                for(var i = 0; i < rows.length; i++){
+                    var conteudo = query[i].login;
+                    alert(conteudo[i]);
+                }
+                
+/*
+            var query = sqlite.run("SELECT SENHA FROM CADASTRO WHERE SENHA = " + senha + ";");
+            var rows = console.log(query);
+
+            for(var i = 0; i < query.length; i++){
+                var d_senha = rows[i];
+                alert(d_senha);
+            }
+
+                if(login == d_login && senha == d_senha){
+                    //Talvez seja possível importar o valor de d_id linkando na outra página, caso não, procurar o script para tal
+                    var query = sqlite.run("SELECT ID FROM CADASTRO WHERE LOGIN = " + login + ";");
+                    var rows = console.log(query);
+
+                    for(var i = 0; i < query.length; i++){
+                        d_id = rows[i];
+                    }
+                    //Depois de configurar a chamada da tela nesse bloco lembrar de fechar a conexão do banco aqui
+                        alert('Seu ID no database é: ' + d_id);
+                }
+                else{
+                    alert('Usuário inexistente no database.');
+                }*/
+
+            sqlite.close();
+        }
+    </script>
 </body>
 </html>
