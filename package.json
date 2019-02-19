@@ -10,8 +10,5 @@
   "license": "ISC",
   "devDependencies": {
     "electron": "^4.0.4"
-  },
-  "dependencies": {
-    "sqlite-sync": "^0.3.8"
   }
 }

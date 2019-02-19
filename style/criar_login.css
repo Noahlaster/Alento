@@ -25,27 +25,3 @@ div{
 input{
     margin-bottom: 10px;
 }
-#input{
-    background-color: #2F3241;
-    color: #F6F8F8;
-    border-radius: 8px;
-    border-color: transparent;
-    height: 40px;
-    width: 90px;
-    margin-right: 50px;
-    position: relative;
-    top: 10px;
-    left: 70px;
-}
-button{
-    background-color: #2F3241;
-    color: #F6F8F8;
-    border-radius: 8px;
-    border-color: transparent;
-    height: 40px;
-    width: 90px;
-    margin-right: 50px;
-    position: relative;
-    top: 10px;
-    left: 70px;
-}
