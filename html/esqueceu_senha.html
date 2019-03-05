@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../style/esqueceu_senha.css">
+    <title>Recuperar Senha</title>
+</head>
+<body>
+    <header>
+    </header>
+    <form>
+        <h2>RECUPERAR ACESSO</h2>
+            <div>
+                <div id="formemail">
+                    <h4>E-mail</h4>
+                    <br>
+                    <input id="email" class="input" type="text" required="required">
+                </div>
+            <br>
+                <input class="buttons" type="button" onclick="goBack()" value="Voltar">
+                <input class="buttons" type="submit" value="Recuperar">
+            <br>
+            <br>
+            <br>  
+            </div>
+    </form>
+    <script>
+        function goBack(){
+            history.back();
+        }
+    </script>
+</body>
+</html>
