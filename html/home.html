@@ -3,9 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/photon.css">
+    <link rel="stylesheet" type="text/css" href="../style/home.css">
     <title>Home</title>
 </head>
 <body>
-    <h1>Chegou na home com sucesso!</h1>
+        <header class="toolbar toolbar-header">
+              
+                <div class="toolbar-actions">
+                  <div class="btn-group">
+                    <button class="btn btn-default">
+                      <span class="icon icon-plus"></span>
+                    </button>
+                    <button class="btn btn-default">
+                      <span class="icon icon-user"></span>
+                    </button>
+                    <button class="btn btn-default">
+                      <span class="icon icon-attach"></span>
+                    </button>
+                    <button class="btn btn-default">
+                        <span class="icon icon-calendar"></span>
+                    </button>
+                    <button class="btn btn-default">
+                            <span class="icon icon-basket"></span>
+                        </button>
+                  </div>
+                    <button class="btn btn-negative pull-right" onclick="deslogar()">Sair</button>
+                </div>
+              </header>
 </body>
 </html>
+
+<script>
+    function deslogar(){
+        history.back();
+    }
+</script>
