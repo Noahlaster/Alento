@@ -9,7 +9,7 @@
 <body>
     <header>
     </header>
-    <form>
+    <form action="../Alento/html/home.html">
             <div>
                 <label>Usuário:</label>
                 <input id="login" class="input" type="text" required="required">
@@ -21,12 +21,14 @@
             <br>
             <br>
             <br>
-                <input id="enviar" type="submit" value="Entrar" onclick="logar()">
+                <input id="enviar" type="button" value="Entrar" onclick="logar()">
+                <button id="submit" type="submit"></button>
             <br>
             <br>
             <br> 
                 <a href="../Alento/html/criar_login.html">Criar Login</a>
                 <a href="../Alento/html/esqueceu_senha.html">Esqueceu sua senha?</a>
+                
             </div>
     </form>
     <script>
@@ -47,9 +49,21 @@
 
             if(login == d_login && senha == d_senha){   
                 //Colocar aqui o código responsavél por abrir a tela home da aplicação.
+                alert('Login realizado !');
+
+                var botao = document.getElementById('submit');
+                botao.click();
+
+                //Pode-se fazer dessa maneira também
+                /*var botao = document.getElementById('submit');
+                setTimeout(function(){
+                    botao.click();
+                }, 1000);*/
+                
             }
             else{
                 alert('Esse login me parece zuado, não funcionou !');
+
             }
 
             sqlite.close();
