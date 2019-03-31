@@ -5,69 +5,105 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" type="text/css" href="../style/photon.css">
       <link rel="stylesheet" type="text/css" href="../style/cadastro.css">
+      <script type="text/javascript" src="../js/jquery_mask_mini.js"></script>
+      <script>  
+
+         window.$ = window.jQuery = require("jquery");
+         require("jquery-mask-plugin");
+
+
+         $(document).ready(function (){
+            $('#cpf').mask('000.000.000-00');
+            $('#rg').mask('00.000.000-0');
+            $('#cep').mask('00000-000');
+            $('#data').mask('00/00/0000');
+            $('#telefone').mask('(000)0000-0000');
+            $('#celular').mask('(000)00000-0000');
+         });
+
+      </script>
       <title>Cadastro</title>
    </head>
    <body>
+      <header class="toolbar toolbar-header">
+            <div class="toolbar-actions">
+                  <div class="btn-group">
+                    <button class="btn btn-default" onclick="cancelar()">
+                      <span class="icon icon-left-open-big"></span>
+                    </button>
+                  </div>
+      </header>
       <form class="formulario">
          <div class="form-group">
-            <label>Nome</label>
-            <input type="text" class="form-control" placeholder="Nome">
+            <br>
+            <label>Nome<p> *</p></label>
+            <input id="nome" type="text" class="form-control-alento" placeholder="Nome Completo" required="require">
          </div>
          <div class="form-group">
-            <label>CPF</label>
-            <input type="text" class="form-control" placeholder="CPF"> 
+            <br>
+            <label>CPF<p> *</p></label>
+            <input id="cpf" type="text" class="form-control-alento" placeholder="xxx.xxx.xxx-xx" maxlength="14" required="require"> 
          </div>
          <div class="form-group">
+            <br>
             <label>RG</label>
-            <input type="text" class="form-control" placeholder="RG">
+            <input id="rg" type="text" class="form-control-alento" placeholder="xx.xxx.xxx-x" maxlength="12">
          </div>
          <div class="form-group">
             <label>Telefone</label>
-            <input type="text" class="form-control" placeholder="Telefone">
+            <input id="telefone" type="text" class="form-control-alento" placeholder="(DDD)xxxx-xxxx" maxlength="14">
          </div>
          <div class="form-group">
             <label>Celular</label>
-            <input type="text" class="form-control" placeholder="Celular">
+            <input id="celular" type="text" class="form-control-alento" placeholder="(DDD)xxxxx-xxxx" maxlength="15">
          </div>
          <div class="form-group">
-            <label>Endereço</label>
-            <input type="text" class="form-control" placeholder="Endereço">
+            <label>Endereço<p> *</p></label>
+            <input id="endereco" type="text" class="form-control-alento" placeholder="Ex: Rua Manoel de Nóbrega N78 Bloco 2 APT 505" required="require">
          </div>
          <div class="form-group">
             <label>CEP</label>
-            <input type="text" class="form-control" placeholder="Cep">
+            <input id="cep" type="text" class="form-control-alento" placeholder="xxxxx-xxx">
          </div>
          <div class="form-group">
             <label>Bairro</label>
-            <input type="text" class="form-control" placeholder="Bairro">
+            <input type="text" class="form-control-alento" placeholder="Bairro">
          </div>
          <div class="form-group">
             <label>Município</label>
-            <input type="text" class="form-control" placeholder="Município">
+            <input type="text" class="form-control-alento" placeholder="Município">
          </div>
          <div class="form-group">
-            <label>Data de nascimento</label>
-            <input type="text" class="form-control" placeholder="Data de nascimento">
+            <label>Data de nascimento<p> *</p></label>
+            <input id="data" type="text" class="form-control-alento" placeholder="xx / xx / xxxx" required="required">
          </div>
          <div class="form-group">
             <label>Filiação</label>
-            <input type="text" class="form-control" placeholder="Nome do pai">
+            <input id="filiacao" type="text" class="form-control-alento" placeholder="Nome do pai">
             <label></label>
-            <input type="text" class="form-control" placeholder="Nome da mãe">
+            <input id="filiacao" type="text" class="form-control-alento" placeholder="Nome da mãe">
          </div>
          <div class="form-group">
-            <label>Estado civíl</label>
-            <input type="text" class="form-control" placeholder="Estado civíl">
+               <label>Estado civil<p> *</p></label>
+               <select id="escolaridade" class="form-control-alento">
+                  <option></option>
+                  <option>Solteiro(a)</option>
+                  <option>Casado(a)</option>
+                  <option>Divorciado(a)</option>
+                  <option>Viúvo(a)</option>
+                  <option>Outro</option>
+               </select>
+            </div>
+         <div class="form-group">
+            <label>Dependentes<p> *</p></label>
+            <input type="text" class="form-control-alento" placeholder="Número" required="required">
          </div>
          <div class="form-group">
-            <label>Dependentes</label>
-            <input type="text" class="form-control" placeholder="Número de dependentes">
-         </div>
-         <div class="form-group">
-            <label>Escolaridade</label>
-            <select class="form-control">
-               <option>Ensino Fundamental</option>
-               <option>Ensino Médio</option>
+            <label>Escolaridade<p> *</p></label>
+            <select id="escolaridade" class="form-control-alento" required="require">
+               <option></option>
+               <option>Fundamental</option>
+               <option>Médio</option>
                <option>Graduação Superior</option>
                <option>Pós-Graduado(a)</option>
                <option>Mestre</option>
@@ -75,22 +111,24 @@
             </select>
          </div>
          <div class="form-group">
-            <label>Profissão</label>
-            <input type="text" class="form-control" placeholder="Profissão">
+            <label>Profissão<p> *</p></label>
+            <input type="text" class="form-control-alento" placeholder="Profissão" required="required">
          </div>
          <div class="form-group">
             <label>Email</label>
-            <input type="email" class="form-control" placeholder="Email">
+            <input type="email" class="form-control-alento" placeholder="Email">
          </div>
-         <button type="button" class="btn btn-form btn-default" onclick="cancelar()">Cancel</button>
-         <button type="submit" class="btn btn-form btn-primary">OK</button>
-         <a id="cancelar" href="../html/home.html" style="display: none"></a>
+         <button id="cadastrar" type="submit" class="btn btn-large btn-primary">Cadastrar</button>
+
+         <!--tags a para o controle dos eventos de botões, ou seja para chamar as telas-->
+         <a id="voltar" href="../html/home.html" style="display: none"></a>
+         
       </form>
    </body>
 </html>
 <script>
    function cancelar(){
-       var botao = document.getElementById('cancelar');
+       var botao = document.getElementById('voltar');
        botao.click();
    }
 </script>
