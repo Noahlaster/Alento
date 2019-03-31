@@ -12,6 +12,8 @@
     "electron": "^4.0.6"
   },
   "dependencies": {
+    "jquery": "^3.3.1",
+    "jquery-mask-plugin": "^1.14.15",
     "sqlite-sync": "^0.3.8"
   }
 }
