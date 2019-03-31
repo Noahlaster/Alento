@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" type="text/css" href="../style/photon.css">
+      <link rel="stylesheet" type="text/css" href="../style/cadastro.css">
+      <title>Cadastro</title>
+   </head>
+   <body>
+      <form class="formulario">
+         <div class="form-group">
+            <label>Nome</label>
+            <input type="text" class="form-control" placeholder="Nome">
+         </div>
+         <div class="form-group">
+            <label>CPF</label>
+            <input type="text" class="form-control" placeholder="CPF"> 
+         </div>
+         <div class="form-group">
+            <label>RG</label>
+            <input type="text" class="form-control" placeholder="RG">
+         </div>
+         <div class="form-group">
+            <label>Telefone</label>
+            <input type="text" class="form-control" placeholder="Telefone">
+         </div>
+         <div class="form-group">
+            <label>Celular</label>
+            <input type="text" class="form-control" placeholder="Celular">
+         </div>
+         <div class="form-group">
+            <label>Endereço</label>
+            <input type="text" class="form-control" placeholder="Endereço">
+         </div>
+         <div class="form-group">
+            <label>CEP</label>
+            <input type="text" class="form-control" placeholder="Cep">
+         </div>
+         <div class="form-group">
+            <label>Bairro</label>
+            <input type="text" class="form-control" placeholder="Bairro">
+         </div>
+         <div class="form-group">
+            <label>Município</label>
+            <input type="text" class="form-control" placeholder="Município">
+         </div>
+         <div class="form-group">
+            <label>Data de nascimento</label>
+            <input type="text" class="form-control" placeholder="Data de nascimento">
+         </div>
+         <div class="form-group">
+            <label>Filiação</label>
+            <input type="text" class="form-control" placeholder="Nome do pai">
+            <label></label>
+            <input type="text" class="form-control" placeholder="Nome da mãe">
+         </div>
+         <div class="form-group">
+            <label>Estado civíl</label>
+            <input type="text" class="form-control" placeholder="Estado civíl">
+         </div>
+         <div class="form-group">
+            <label>Dependentes</label>
+            <input type="text" class="form-control" placeholder="Número de dependentes">
+         </div>
+         <div class="form-group">
+            <label>Escolaridade</label>
+            <select class="form-control">
+               <option>Ensino Fundamental</option>
+               <option>Ensino Médio</option>
+               <option>Graduação Superior</option>
+               <option>Pós-Graduado(a)</option>
+               <option>Mestre</option>
+               <option>Doutor(a)</option>
+            </select>
+         </div>
+         <div class="form-group">
+            <label>Profissão</label>
+            <input type="text" class="form-control" placeholder="Profissão">
+         </div>
+         <div class="form-group">
+            <label>Email</label>
+            <input type="email" class="form-control" placeholder="Email">
+         </div>
+         <button type="button" class="btn btn-form btn-default" onclick="cancelar()">Cancel</button>
+         <button type="submit" class="btn btn-form btn-primary">OK</button>
+         <a id="cancelar" href="../html/home.html" style="display: none"></a>
+      </form>
+   </body>
+</html>
+<script>
+   function cancelar(){
+       var botao = document.getElementById('cancelar');
+       botao.click();
+   }
+</script>

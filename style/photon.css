@@ -584,7 +584,21 @@ input[type="checkbox"] {
   margin: 4px 0 0;
   line-height: normal;
 }
-
+.formulario {
+  position: relative;
+  left: 20%;
+  margin-top: 5%;
+  display: inline-block;
+  width: 500px;
+  min-height: 25px;
+  padding: 5px 10px;
+  font-size: 13px;
+  line-height: 1.6;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+}
 .form-control {
   display: inline-block;
   width: 100%;

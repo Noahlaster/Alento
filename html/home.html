@@ -12,7 +12,7 @@
               
                 <div class="toolbar-actions">
                   <div class="btn-group">
-                    <button class="btn btn-default">
+                    <button class="btn btn-default" onclick="cadastro()">
                       <span class="icon icon-plus"></span>
                     </button>
                     <button class="btn btn-default">
@@ -30,12 +30,40 @@
                   </div>
                     <button class="btn btn-negative pull-right" onclick="deslogar()">Sair</button>
                 </div>
+                    <a id="index" href="../index.html" style="display: none"></a>
+                    <a id="cadastro" href="../html/cadastro.html" style="display: none"></a>
+                    <a id="pacientes" href="../html/pacientes.html" style="display: none"></a>
+                    <a id="arquivos" href="../html/arquivos.html" style="display: none"></a>
+                    <a id="calendario" href="../html/calendario.html" style="display: none"></a>
+                    <a id="balanco" href="../html/balanco.html" style="display: none"></a>
               </header>
 </body>
 </html>
 
 <script>
     function deslogar(){
-        history.back();
+      var botao = document.getElementById('index');
+        botao.click();
+    }
+    
+    function cadastro(){
+        var botao = document.getElementById('cadastro');
+        botao.click();
+    }
+    function pacientes(){
+        var botao = document.getElementById('pacientes');
+        botao.click();
+    }
+    function arquivos(){
+        var botao = document.getElementById('arquivos');
+        botao.click();
+    }
+    function calendario(){
+        var botao = document.getElementById('calendario');
+        botao.click();
+    }
+    function balanco(){
+        var botao = document.getElementById('balanco');
+        botao.click();
     }
 </script>
