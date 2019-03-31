@@ -1,3 +1,74 @@
 body{
     background-color: #2F3241;
 }
+label {
+    display: inline-flexbox;
+    font-size: 13px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+.formulario {
+    position: relative;
+    left: 18%;
+    margin-top: 3%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 500px;
+    width: 900px;
+    min-height: 25px;
+    padding: 5px 10px;
+    font-size: 13px;
+    line-height: 1.6;
+    background-color: rgb(228, 228, 228);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+    overflow: auto;
+  }
+  .form-control-alento {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-height: 25px;
+    margin-top: -20px;
+    margin-left: 20px;
+    padding: 5px 10px;
+    font-size: 13px;
+    line-height: 1.6;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+    cursor: text;
+  }
+  .form-control-alento:focus {
+    border-color: #6db3fd;
+    box-shadow: 1px 1px 0 #6db3fd, -1px -1px 0 #6db3fd, -1px 1px 0 #6db3fd, 1px -1px 0 #6db3fd;
+  }
+  #nome{
+      width: 400px;
+  } 
+  #escolaridade{
+      
+      cursor: default;
+  }
+  #cadastrar{
+      margin-top: 20px;
+      margin-left: 75px; 
+      height: 40px;
+      width: 100px;
+  }
+  #endereco{
+      width: 400px;
+  }
+  #filiacao{
+      width: 400px;
+  }
+  p{
+      display: inline;
+      color: red;
+  }
