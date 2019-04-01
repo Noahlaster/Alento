@@ -4,31 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Criar Conta</title>
+    <link rel="stylesheet" type="text/css" href="../style/photon.css">
     <link rel="stylesheet" type="text/css" href="../style/criar_login.css">
 </head>
 <body>
-    <form>
-        <h2>REGISTRAR MINHA CONTA</h2>
-        <div>
-            <input id="nome" type="text" placeholder="Nome Completo" size="50" required="required">
+        <header class="toolbar toolbar-header">
+                <div class="toolbar-actions">
+                      <div class="btn-group">
+                        <button class="btn btn-default" onclick="voltar()">
+                          <span class="icon icon-left-open-big"></span>
+                        </button>
+                      </div>
+          </header>
+    <form class="formulario">
+            <div id="positionform">
+        <div class="form-group">
             <br>
-            <input id="email" type="text" placeholder="E-mail" size="50" required="required">
+            <label>Nome</label>
             <br>
-            <input id="login" type="text" placeholder="Login" size="50" size="50" required="required">
-            <br>
-            <input id="senha" type="password" placeholder="Senha" size="50" required="required">
-            <br>
-            <input id="c_senha" type="password" placeholder="Repita a senha" size="50" required="required">
-            <br>
-            <input id="d_senha" type="text" placeholder="Dica de senha" size="50" required="required">
-            <br>
-            <input class="buttons" type="button" name="voltar" onclick="goBack()" value="Voltar">
-            <button class="buttons" type="submit" onclick="criarLogin()">Registrar</button>
+            <input id="nome" type="text" class="form-control-alento" placeholder="Nome Completo" required="required">
         </div>
+        <div class="form-group">
+            <label>Email</label>
+            <br>
+            <input id="email" type="text" class="form-control-alento" placeholder="E-mail" required="required">
+        </div>
+        <div class="form-group">
+            <label>Login</label>
+            <br>
+            <input id="login" type="text" class="form-control-alento" placeholder="Login" required="required">
+        </div>
+            
+        <div class="form-group">
+            <br>
+            <label>Senha</label>
+            <br>
+                <input id="senha" type="password" class="form-control-alento" placeholder="Senha" required="required">
+            <br>
+            <br>
+                <input id="c_senha" type="password" class="form-control-alento" placeholder="Repita a senha" required="required">
+            <br>
+            <br>
+            <input id="d_senha" type="text" class="form-control-alento" placeholder="Dica de senha" required="required">
+        </div>
+        </div>
+    
+            <button id="registrar" class="btn-mini btn-group" type="submit" onclick="criarLogin()">Registrar</button>
     </form>
+    <a id="index" href="../index.html" style="display: none">.</a>
     <script>
-        function goBack(){
-            history.back();
+        function voltar(){
+            var voltar = document.getElementById('index');
+            voltar.click();
         }
         function criarLogin(){
 
