@@ -1,33 +1,47 @@
 body{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #2F3241;
 }
-form{
-   
-    width: 500px;
-    height: 70%;
-    position: absolute;
-    top: 15%;
-    left: 18%;
-    background-color: #F6F8F8;
-    border-radius: 10px;
-}
-h2{
+.formulario {
     position: relative;
-    left: 20px;
-}
-div{
-    display: block;
-    position: relative;
-    top: 5%;
-    left: 13%;
-}
-input{
-    position: relative;
-    left: -20px;
-    margin-bottom: 10px;
-}
-.buttons{
+    left: 470px;
+    margin-top: 3%;
+    display: inline-block;
+    height: 500px;
+    width: 400px;
+    min-height: 25px;
+    padding: 5px 10px;
+    font-size: 13px;
+    line-height: 1.6;
+    background-color: rgb(228, 228, 228);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+    overflow: hidden;
+  }
+  .form-control-alento {
+    display: inline;
+    width: 300px;
+    min-height: 25px;
+    margin-top: -20px;
+    margin-left: 0px;
+    padding: 5px 10px;
+    font-size: 13px;
+    line-height: 1.6;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+    cursor: text;
+  }
+  .form-control-alento:focus {
+    border-color: #6db3fd;
+    box-shadow: 1px 1px 0 #6db3fd, -1px -1px 0 #6db3fd, -1px 1px 0 #6db3fd, 1px -1px 0 #6db3fd;
+  }
+  #positionform{
+      position: relative;
+      left: 40px;
+  }
+  #registrar{
     background-color: #2f3241;
     color: #F6F8F8;
     border-radius: 8px;
@@ -36,25 +50,10 @@ input{
     width: 90px;
     position: relative;
     top: 30px;
-    left: 15%;
+    left: 140px;
     margin-right: 8%;
-}
-.buttons:hover{
+  }
+  #registrar:hover{
     background-color: #42475c;
-}
-@media only screen and (min-width: 1200px){
-    input{
-        left: 12px;
-    }
-    .buttons{
-        top: 65px;
-        left: 17%;
-        margin-right: 10%
-    }
-    form{
-        left: 380px;
-        width: 600px;
-        height: 450px;
-    }
-
-}
+  }
+  
