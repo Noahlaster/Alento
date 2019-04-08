@@ -56,4 +56,26 @@ body{
   #registrar:hover{
     background-color: #42475c;
   }
+
+  @media only screen and (max-width: 800px){
+
+    .formulario {
+      position: relative;
+      left: 200px;
+      margin-top: 2%;
+      display: inline-block;
+      height: 490px;
+      width: 400px;
+      min-height: 25px;
+      padding: 5px 10px;
+      font-size: 13px;
+      line-height: 1.6;
+      background-color: rgb(228, 228, 228);
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      outline: none;
+      overflow: hidden;
+    }
+
+  }
   
