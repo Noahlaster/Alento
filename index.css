@@ -11,14 +11,14 @@
             width: 50%;
             height: 65%;
             position: absolute;
-            top: 25%;
+            top: 20%;
             left: 25%;
-            background-color: #F6F8F8;
+            background-color: rgb(228, 228, 228);
             border-radius: 10px;
         }
         a{
             position: relative;
-            top: 20px;
+            top: 15px;
             left: -10%;
             margin-right: 15px;
             color: #2F3241;
@@ -58,6 +58,19 @@
         #enviar:hover{
             background-color: #42475c;
             
+        }
+        #lembrar{
+            display: inline;
+            position: relative;
+            top: 16px;
+        }
+        #label{
+            position: relative;
+            top: -3px;
+            left: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 14px;
         }
         @media only screen and (min-width: 800px){
             
